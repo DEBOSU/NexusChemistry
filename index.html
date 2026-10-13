@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Chemistry - Alcohol Reactions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Animation (Molecules) -->
+    <div class="background-animation">
+        <!-- Molecule 1 -->
+        <div class="molecule mol-1">
+            <div class="node n-center"></div>
+            <div class="node n-top"></div>
+            <div class="node n-bottom-left"></div>
+            <div class="node n-bottom-right"></div>
+            <div class="bond b-top"></div>
+            <div class="bond b-left"></div>
+            <div class="bond b-right"></div>
+        </div>
+        
+        <!-- Molecule 2 (Hexagon shape) -->
+        <div class="molecule mol-2">
+            <div class="node n1"></div>
+            <div class="node n2"></div>
+            <div class="node n3"></div>
+            <div class="node n4"></div>
+            <div class="node n5"></div>
+            <div class="node n6"></div>
+            <div class="bond b1"></div>
+            <div class="bond b2"></div>
+            <div class="bond b3"></div>
+            <div class="bond b4"></div>
+            <div class="bond b5"></div>
+            <div class="bond b6"></div>
+        </div>
+
+        <!-- Molecule 3 (Chain) -->
+        <div class="molecule mol-3">
+            <div class="node n-left"></div>
+            <div class="node n-center"></div>
+            <div class="node n-right"></div>
+            <div class="bond b-left"></div>
+            <div class="bond b-right"></div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- Logo Image (Cropped via CSS) -->
+            <div class="logo-img-container">
+                <img src="logo.png" alt="Nexus Chemistry Logo" class="logo-img">
+            </div>
+            <!-- Logo Text with Prominent 'N' -->
+            <div class="logo-text">
+                <h1><span class="highlight-n">N</span>exus Chemistry</h1>
+                <span>CHEMISTRY PROJECT</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#reaction-details"><i class="fa-solid fa-flask"></i> Reactions</a></li>
+            <li><a href="#"><i class="fa-solid fa-book-open"></i> Learn</a></li>
+            <li><a href="#"><i class="fa-solid fa-table-cells-large"></i> Resources</a></li>
+        </ul>
+        <a href="#" class="btn-safety">Safety Precautions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Discover & Explore <br><span class="gold-text">Alcohol Reactions</span></h1>
+            <p>From simple oxidation to complex esterification, explore the mechanisms of alcohols with detailed explanations, balanced equations and more.</p>
+            <button id="explore-btn" class="btn-primary">Explore Reactions <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="hero-right">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search for a reaction... (e.g., oxidation, dehydration)">
+            </div>
+
+            <p class="category-label">BROWSE BY CATEGORY</p>
+
+            <!-- Category Grid -->
+            <div class="category-grid" id="category-grid">
+                <div class="card" data-category="oxidation">
+                    <i class="fa-solid fa-fire-flame-curved card-icon"></i>
+                    <span>Oxidation</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+                <div class="card" data-category="dehydration">
+                    <i class="fa-solid fa-droplet-slash card-icon"></i>
+                    <span>Dehydration</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+                <div class="card" data-category="esterification">
+                    <i class="fa-solid fa-flask-vial card-icon"></i>
+                    <span>Esterification</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+                <div class="card" data-category="metals">
+                    <i class="fa-solid fa-atom card-icon"></i>
+                    <span>Active Metals</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+                <div class="card" data-category="halogenation">
+                    <i class="fa-solid fa-circle-nodes card-icon"></i>
+                    <span>Halogenation</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+                <div class="card" data-category="combustion">
+                    <i class="fa-solid fa-fire card-icon"></i>
+                    <span>Combustion</span>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </div>
+            </div>
+
+            <!-- Learn More -->
+            <div class="learn-more">
+                <i class="fa-regular fa-lightbulb"></i>
+                <div>
+                    <h4>Learn More</h4>
+                    <p>Quick guides, key concepts and useful tips.</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reaction Details Section (Oxidation of Methanol) -->
+    <section id="reaction-details" class="reaction-section">
+        <div class="section-header">
+            <h2>Oxidation of <span class="gold-text">Methanol</span></h2>
+            <p>Formation of Formaldehyde</p>
+        </div>
+
+        <div class="reaction-container">
+            <div class="reaction-info">
+                <h3>Reaction Equation</h3>
+                <div class="equation-box">
+                    <p>2CH₃OH + O₂ <span class="arrow">→</span> 2HCHO + 2H₂O</p>
+                    <p class="conditions">(Catalyst: Cu or Ag, Heat)</p>
+                </div>
+                
+                <h3>Explanation</h3>
+                <p>Methanol (CH₃OH) undergoes catalytic oxidation using copper (Cu) or silver (Ag) as a catalyst at high temperatures. This process breaks the C-H bond and the O-H bond, resulting in the formation of Formaldehyde (HCHO) and water. This is a primary alcohol oxidation reaction.</p>
+                
+                <div class="safety-note">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p><strong>Safety Note:</strong> Formaldehyde is a toxic gas. This experiment must be conducted in a well-ventilated area or fume hood.</p>
+                </div>
+            </div>
+
+            <!-- Video Placeholder -->
+            <div class="video-container">
+                <h3>Experiment Video</h3>
+                <div class="video-placeholder" id="video-placeholder">
+                    <i class="fa-solid fa-play"></i>
+                    <p>Watch the experiment</p>
+                </div>
+                <!-- Video iframe will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed & Created by <span class="gold-text">Dr. Youssef Ehab</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
