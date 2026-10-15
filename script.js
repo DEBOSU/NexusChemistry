@@ -1,3 +1,5 @@
+console.log("Script Loaded Successfully!"); // للتأكد إن الملف شغال
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // ============================================================
@@ -175,5 +177,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ============================================================
-    // 5. SEARCH LOGIC
+    // =================
