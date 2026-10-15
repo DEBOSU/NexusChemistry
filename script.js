@@ -178,3 +178,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =================
+});
+    }
+
+    // ============================================================
+    // 5. SEARCH LOGIC
+    // ============================================================
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        if (term === '') {
+            reactionContainer.innerHTML = `
+                <div class="empty-state">
+                    <i class="fa-solid fa-flask"></i>
+                    <h3>Start Your Search</h3>
+                    <p>Type an element name above to see its reactions.</p>
+                </div>
+            `;
+            resultsTitle.innerHTML = 'Explore <span class="gold-text">Reactions</span>';
+            resultsSubtitle.textContent = 'Use the search bar or select a category to get started.';
+            return;
+        }
+
+        const filtered = reactionsDB.filter(r => 
+            r.element.toLowerCase().includes(term) || 
+            r.symbol.toLowerCase().includes(term)
+        );
+
+        renderReactions(filtered, `Results for "${e.target.value}"`, `Found ${filtered.length} reaction(s).`);
+    });
+
+    // ============================================================
+    // 6. CATEGORY FILTER LOGIC
+    // ============================================================
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.getAttribute('data-category');
+            
+            categoryCards.forEach(c => c.style.borderColor = '');
+            card.style.borderColor = 'var(--gold-primary)';
+
+            document.getElementById('reaction-details').scrollIntoView({ behavior: 'smooth' });
+
+            const filtered = reactionsDB.filter(r => r.type === category);
+            
+            const categoryName = category.charAt(0).toUpperCase() + category.slice(1);
+            renderReactions(filtered, `${categoryName} <span class="gold-text">Reactions</span>`, `${filtered.length} reaction(s) found in this category.`);
+        });
+    });
+
+    // ============================================================
+    // 7. EXPLORE BUTTON
+    // ============================================================
+    document.getElementById('explore-btn').addEventListener('click', () => {
+        document.getElementById('reaction-details').scrollIntoView({ behavior: 'smooth' });
+    });
+
+}); // <--- نهاية الملف
